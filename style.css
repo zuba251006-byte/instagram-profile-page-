@@ -1,0 +1,235 @@
+:root {
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    back
+}
+
+/* Container */
+.container {
+    max-width: 935px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Profile Layout */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 5rem 0;
+}
+
+
+/* Profile Image */
+.profile-image {
+    flex: 0 0 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+box-shadow:
+    0 0 5px #ffb3d9,
+    0 0 15px #ff80bf,
+    0 0 25px #ff4da6;
+}
+
+/* Profile Info */
+.profile-info {
+    flex: 1;
+    margin-left: 40px;
+}
+
+/* Username + Buttons */
+.profile-user-setting {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-User-Name {
+    font-size: 3.2rem;
+    font-weight: 300;
+}
+
+/* Buttons */
+.profile-edit-btn {
+    padding: 5px 10px;
+    background: transparent;
+    background-color: aliceblue;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color:rgb(133, 133, 254);
+    font-weight: 600;
+    border-color: #ffb3d9;
+}
+   
+
+.setting-edit-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: rgb(45, 99, 147); 
+    background-color: aliceblue;
+     border-color: #ffb3d9;
+}
+
+/* Stats */
+.profile-stats ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    gap: 30px;
+}
+
+.profile-stats li {
+    font-size: 1.6rem;
+}
+
+.profile-stats-count {
+    font-weight: 600;
+}
+
+/* Bio */
+.profile-bio {
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.profile-real-name {
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-info {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .profile-user-setting {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .profile-stats ul {
+        justify-content: center;
+    }
+}
+
+/* Instagram Gallery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #000;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hover effect (like Instagram) */
+.gallery-item::after {
+    content: "❤ 2.4k   💬 120";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* Background Video */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content above video */
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: white background for readability */
+.container {
+    border-radius: 10px;
+}
+
+/* Consistent vertical spacing */
+.profile-user-setting,
+.profile-stats,
+.profile-bio {
+    margin-bottom: 1.6rem;
+}
+
+.profile-stats ul li {
+    margin-right: 3rem;
+}
+
+
